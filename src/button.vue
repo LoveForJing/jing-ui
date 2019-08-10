@@ -9,7 +9,11 @@
 </template>
 
 <script>
+    import Icon from './icon'
     export default {
+        components: {
+            'j-icon': Icon
+        },
         props: {
             icon: {},
             loading: {
