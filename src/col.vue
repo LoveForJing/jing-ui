@@ -1,5 +1,5 @@
 <template>
-    <div class="col" :class="colClass">
+    <div class="col" :class="colClass" :style="colStyle">
         <slot></slot>
     </div>
 </template>
@@ -14,10 +14,22 @@
                 type: [Number, String]
             }
         },
+        data() {
+            return {
+                gutter: 0
+            }
+        },
         computed: {
             colClass() {
                 const { span, offset } = this
                 return [span && `col-${span}`, offset && `offset-${offset}`]
+            },
+            colStyle() {
+                const { gutter } = this
+                return {
+                    paddingLeft: gutter / 2 + 'px',
+                    paddingRight: gutter / 2 + 'px',
+                }
             }
         }
     }
@@ -25,9 +37,7 @@
 <style scoped lang="scss">
     .col {
         height: 50px;
-        background: gray;
         width: 50%;
-        border: 1px solid red;
         $class-prefix: col-;
         @for $n from 1 through 24 {
             &.#{$class-prefix}#{$n} {

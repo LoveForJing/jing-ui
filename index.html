@@ -29,6 +29,10 @@
         }
     </style>
     <style>
+        .demo {
+            border: 1px solid green;
+            height: 50px;
+        }
     </style>
 </head>
 <body>
@@ -51,19 +55,35 @@
             <j-input value="王五" error="不能少于三个字"></j-input>
         </div>
         <div style="margin-top: 32px;">
-            <j-row>
-                <j-col>123</j-col>
-                <j-col>123</j-col>
+            <j-row gutter="20">
+                <j-col>
+                    <div class="demo">123</div>
+                </j-col>
+                <j-col>
+                    <div class="demo">123</div>
+                </j-col>
             </j-row>
             <j-row>
-                <j-col span="1">123</j-col>
-                <j-col span="9">123</j-col>
-                <j-col span="14">123</j-col>
+                <j-col span="1">
+                    <div class="demo">123</div>
+                </j-col>
+                <j-col span="9">
+                    <div class="demo">123</div>
+                </j-col>
+                <j-col span="14">
+                    <div class="demo">123</div>
+                </j-col>
             </j-row>
             <j-row>
-                <j-col span="1">123</j-col>
-                <j-col span="9">123</j-col>
-                <j-col span="12" offset="2">123</j-col>
+                <j-col span="1">
+                    <div class="demo">123</div>
+                </j-col>
+                <j-col span="9">
+                    <div class="demo">123</div>
+                </j-col>
+                <j-col span="12" offset="2">
+                    <div class="demo">123</div>
+                </j-col>
             </j-row>
         </div>
     </div>
